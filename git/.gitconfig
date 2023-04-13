@@ -1,0 +1,52 @@
+[init]
+
+[core]
+  excludesfile = ~/.gitignore.global
+
+[user]
+  name = Sung Noh
+  email = noh.sung@gmail.com
+	signingkey = FD4582314F0EBCAE
+
+[github]
+  user = nohmar
+
+[merge]
+  tool = vimdiff
+
+[push]
+  default = simple
+
+[branch]
+  autosetuprebase = always
+
+[alias]
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  pu = !git push --set-upstream origin `git symbolic-ref --short HEAD`
+
+[rebase]
+  autosquash = true
+
+[color]
+  branch       = auto
+  diff         = auto
+  status       = auto
+[color "branch"]
+  current      = yellow reverse
+  local        = yellow
+  remote       = green
+[color "diff"]
+  meta         = blue
+  frag         = yellow
+  old          = red
+  new          = green
+[color "status"]
+  header       = magenta bold
+  branch       = magenta
+  added        = green
+  changed      = blue
+  untracked    = cyan bold
+[commit]
+	gpgsign = true
+[hub]
+	protocol = ssh

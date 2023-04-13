@@ -1,0 +1,106 @@
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+set encoding=utf-8
+
+call vundle#rc()
+
+Plugin 'gmarik/Vundle.vim'
+
+" Tim Pope
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-vinegar'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-rhubarb'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-projectionist'
+
+" FZF
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+
+" Visuals
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+" Javascript
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'leafgarland/typescript-vim'
+
+" Rust
+Plugin 'rust-lang/rust.vim'
+
+" Elixir
+Plugin 'elixir-editors/vim-elixir'
+Plugin 'mhinz/vim-mix-format'
+
+filetype plugin indent on
+syntax on
+colo jellybeans
+
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set wildmode=longest,list,full
+set nu
+set hlsearch
+set ls=2
+set splitright
+set splitbelow
+set fillchars+=vert:│
+set listchars=tab:▸\ ,trail:·,nbsp:¬,eol:¶,extends:»,precedes:«
+set backupcopy=yes
+
+" Lead me
+let mapleader = "\<space>"
+
+" Airline
+let g:airline_theme = 'bubblegum'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_alt_sep = ''
+
+" Disable clunky commands
+map q \<noop>
+map q: \<noop>
+nnoremap Q \<noop>
+nnoremap K \<noop>
+
+" Search
+nnoremap <silent><leader>e :FZF<cr>
+
+" Move lines in normal, insert, visual modes
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <ESC>:m .+1<CR>==gi
+inoremap <C-k> <ESC>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
+
+" Shortcuts
+map <Leader>B :Git blame<CR>
+nmap <Leader>c :vs $MYVIMRC<CR>
+nmap <Leader>o :so $MYVIMRC<CR>
+nnoremap <leader>mk :!mkdir -p %:p:h<cr>
+noremap <C-s> :update<CR>
+map <Leader>f :let @+=expand('%:p')<CR>
+map <Leader>T :Dispatch<CR>
+
+" Highlight line length zone
+hi ColorColumn ctermbg=235 guibg=#2c2d27
+set colorcolumn=80
+
+" Copy and paste via tmux
+set clipboard=unnamed
+
+" Open fzf in split window
+let g:fzf_layout = { 'down': '40%' }
+
+" Format Elixir files on save
+let g:mix_format_on_save = 1

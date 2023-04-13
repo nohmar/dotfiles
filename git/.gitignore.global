@@ -1,0 +1,26 @@
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride  
+
+# Packages
+*.gz
+*.iso
+*.rar
+*.tar
+*.zip
+
+# Logs
+*.log
+
+# Ruby
+**/vendor/bundle
+vendor/bundle
+**/.bundle
+
+# Vim
+*.swp
+
+.env
+
+teamocil
