@@ -87,6 +87,7 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 map <Leader>B :Git blame<CR>
 nmap <Leader>c :vs $MYVIMRC<CR>
 nmap <Leader>o :so $MYVIMRC<CR>
+nmap <Leader>q :qa<CR>
 nnoremap <leader>mk :!mkdir -p %:p:h<cr>
 noremap <C-s> :update<CR>
 map <Leader>f :let @+=expand('%:p')<CR>
