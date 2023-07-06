@@ -103,5 +103,6 @@ set clipboard=unnamed
 " Open fzf in split window
 let g:fzf_layout = { 'down': '40%' }
 
-" Format Elixir files on save
+" Format files on save
 let g:mix_format_on_save = 1
+let g:rustfmt_autosave = 1
