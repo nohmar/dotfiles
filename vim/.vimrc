@@ -39,6 +39,10 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'mhinz/vim-mix-format'
 
+" LSP
+Plugin 'dense-analysis/ale'
+
+
 filetype plugin indent on
 syntax on
 colo jellybeans
@@ -92,6 +96,7 @@ nnoremap <leader>mk :!mkdir -p %:p:h<cr>
 noremap <C-s> :update<CR>
 map <Leader>f :let @+=expand('%:p')<CR>
 map <Leader>T :Dispatch<CR>
+map <Leader>d :ALEDetail<CR>
 
 " Highlight line length zone
 hi ColorColumn ctermbg=235 guibg=#2c2d27
@@ -106,3 +111,12 @@ let g:fzf_layout = { 'down': '40%' }
 " Format files on save
 let g:mix_format_on_save = 1
 let g:rustfmt_autosave = 1
+
+" Rust
+let g:ale_rust_cargo_use_clippy = 1
+
+" Ale globals
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
