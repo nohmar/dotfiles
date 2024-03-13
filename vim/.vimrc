@@ -117,6 +117,25 @@ let g:rustfmt_autosave = 1
 " Rust
 let g:ale_rust_cargo_use_clippy = 1
 
+" JS
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\   'typescriptreact': ['standard'],
+\   'css': ['stylelint'],
+\}
+
+let g:ale_fixers = {
+\  'javascript': ['prettier'],
+\  'typescriptreact': ['prettier'],
+\  'css': ['prettier'],
+\}
+
+let g:ale_linters_ignore = {
+\   'javascript': ['eslint'],
+\   'typescriptreact': ['eslint'],
+\   'ruby': ['rubocop'],
+\}
+
 " Ale globals
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
