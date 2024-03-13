@@ -120,7 +120,7 @@ let g:ale_rust_cargo_use_clippy = 1
 " JS
 let g:ale_linters = {
 \   'javascript': ['standard'],
-\   'typescriptreact': ['standard'],
+\   'typescriptreact': ['tsserver'],
 \   'css': ['stylelint'],
 \}
 
