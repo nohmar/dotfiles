@@ -42,6 +42,8 @@ Plugin 'mhinz/vim-mix-format'
 " LSP
 Plugin 'dense-analysis/ale'
 
+" CamelCase motion support
+Plugin 'bkad/CamelCaseMotion'
 
 filetype plugin indent on
 syntax on
