@@ -1,4 +1,5 @@
 [init]
+	defaultBranch = master
 
 [core]
   excludesfile = ~/.gitignore.global
