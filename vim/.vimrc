@@ -29,7 +29,7 @@ Plugin 'vim-airline/vim-airline-themes'
 
 " Javascript
 Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
+Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'leafgarland/typescript-vim'
 
 " Rust
