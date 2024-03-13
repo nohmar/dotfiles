@@ -24,3 +24,5 @@ vendor/bundle
 .env
 
 teamocil
+
+*.bak
