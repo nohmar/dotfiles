@@ -80,6 +80,7 @@ map q \<noop>
 map q: \<noop>
 nnoremap Q \<noop>
 nnoremap K \<noop>
+nnoremap <C-z> \<noop>
 
 " Search
 nnoremap <silent><leader>e :FZF<cr>
