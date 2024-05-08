@@ -103,6 +103,7 @@ noremap <C-s> :update<CR>
 map <Leader>f :let @+=expand('%:p')<CR>
 map <Leader>T :Dispatch<CR>
 map <Leader>d :ALEDetail<CR>
+nnoremap <C-z> :pclose<CR>
 nnoremap <C-]> :ALEGoToDefinition<CR>
 nnoremap <Leader>k :ALEHover<CR>
 
