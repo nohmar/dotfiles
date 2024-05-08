@@ -39,6 +39,9 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'mhinz/vim-mix-format'
 
+" GQL
+Plugin 'jparise/vim-graphql'
+
 " LSP
 Plugin 'dense-analysis/ale'
 
