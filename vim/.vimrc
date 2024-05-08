@@ -103,6 +103,8 @@ noremap <C-s> :update<CR>
 map <Leader>f :let @+=expand('%:p')<CR>
 map <Leader>T :Dispatch<CR>
 map <Leader>d :ALEDetail<CR>
+nnoremap <C-]> :ALEGoToDefinition<CR>
+nnoremap <Leader>k :ALEHover<CR>
 
 " Highlight line length zone
 hi ColorColumn ctermbg=235 guibg=#2c2d27
