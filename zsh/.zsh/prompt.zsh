@@ -9,7 +9,7 @@ precmd() { vcs_info }
 
 local current_dir="~%f%b "
 
-PROMPT='%F{2}%n ${vcs_info_msg_0_}
+PROMPT='%F{39}%n@%F{210}%m ${vcs_info_msg_0_}
 %F{6}%${current_dir}'
 
 setopt prompt_subst
