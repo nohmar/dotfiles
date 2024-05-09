@@ -22,7 +22,6 @@ path=(
   /usr/local/{bin,sbin}
   ${HOME}/bin
   $path
-  ${HOME}/Library/Python/3.8/bin
 )
 
 # Allow commands to pass through to applications
