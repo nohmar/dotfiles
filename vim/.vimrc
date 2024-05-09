@@ -112,7 +112,7 @@ hi ColorColumn ctermbg=235 guibg=#2c2d27
 set colorcolumn=80
 
 " Copy and paste via tmux
-set clipboard=unnamed
+set clipboard=unnamed,unnamedplus
 
 " Open fzf in split window
 let g:fzf_layout = { 'down': '40%' }
