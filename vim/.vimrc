@@ -50,7 +50,7 @@ Plugin 'bkad/CamelCaseMotion'
 
 filetype plugin indent on
 syntax on
-colo jellybeans
+:silent! colo jellybeans
 
 set tabstop=2
 set shiftwidth=2
