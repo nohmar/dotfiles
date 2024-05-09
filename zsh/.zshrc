@@ -5,6 +5,10 @@ export PAGER='less'
 export KEYTIMEOUT=1
 export REPORTTIME=10
 
+HISTFILE=${HOME}/.zsh_history
+HISTSIZE=2000
+SAVEHIST=1000
+
 # Enable IEx history
 export ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_file_bytes 1024000"
 
