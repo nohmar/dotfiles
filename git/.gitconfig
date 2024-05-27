@@ -13,7 +13,7 @@
   user = nohmar
 
 [merge]
-  tool = vimdiff
+  tool = nvim
 
 [push]
   default = simple
