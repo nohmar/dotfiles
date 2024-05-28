@@ -1,1 +1,1 @@
-vim.g.mapleader = " "
+require("base")
