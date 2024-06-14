@@ -51,5 +51,11 @@ return {
         Lua = {}
       }
     })
+
+    require('lspconfig').rust_analyzer.setup({
+      on_init = function()
+        vim.g.rustfmt_autosave = 1
+      end
+    })
   end
 }
