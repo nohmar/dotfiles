@@ -15,7 +15,7 @@ return {
         "rust_analyzer",
         "elixirls",
         "ruby_lsp",
-        "tsserver",
+        "ts_ls",
       },
 
       handlers = {
