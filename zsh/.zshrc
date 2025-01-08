@@ -36,3 +36,5 @@ autoload -Uz compinit && compinit
 . $HOME/.asdf/asdf.sh
 
 compctl -g '~/.teamocil/*(:t:r)' teamocil
+
+[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
