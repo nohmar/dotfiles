@@ -8,7 +8,12 @@ return {
   },
 
   config = function()
-    require("mason").setup()
+    -- Set PATH config to 'append' to ensure system packages are prioritized over
+    -- ones installed by Mason e.g. `rust-analyzer`.
+    require("mason").setup({
+      PATH = "append"
+    })
+
     require("mason-lspconfig").setup({
       ensure_installed = {
         "lua_ls",
