@@ -10,7 +10,7 @@ vim.keymap.set("n", "-", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>c", ":e $MYVIMRC<CR>")
 
 -- Search in files
-vim.keymap.set("n", "<leader>s", ":Rg ")
+vim.keymap.set("n", "<leader>s", ":Rg <C-R><C-W><CR>")
 
 -- Source current file
 vim.keymap.set("n", "<leader>o", ":so<CR>")
