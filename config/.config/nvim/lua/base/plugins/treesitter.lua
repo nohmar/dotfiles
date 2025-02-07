@@ -34,7 +34,6 @@ return {
 
       indent = {
         enable = true,
-        disable = { "ruby" },
       },
 
       highlight = {
@@ -45,5 +44,7 @@ return {
         enable = true,
       },
     })
+
+    vim.cmd('autocmd FileType ruby setlocal indentkeys-=.')
   end
 }
