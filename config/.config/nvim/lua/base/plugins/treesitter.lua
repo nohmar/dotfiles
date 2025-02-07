@@ -1,6 +1,10 @@
 return {
   "nvim-treesitter/nvim-treesitter",
 
+  dependencies = {
+    "RRethy/nvim-treesitter-endwise"
+  },
+
   build = ":TSUpdate",
 
   config = function()
@@ -30,12 +34,17 @@ return {
 
       indent = {
         enable = true,
-        disable = { "ruby" },
       },
 
       highlight = {
         enable = true,
-      }
+      },
+
+      endwise = {
+        enable = true,
+      },
     })
+
+    vim.cmd('autocmd FileType ruby setlocal indentkeys-=.')
   end
 }
