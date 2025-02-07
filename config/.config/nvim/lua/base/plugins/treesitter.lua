@@ -1,6 +1,10 @@
 return {
   "nvim-treesitter/nvim-treesitter",
 
+  dependencies = {
+    "RRethy/nvim-treesitter-endwise"
+  },
+
   build = ":TSUpdate",
 
   config = function()
@@ -35,7 +39,11 @@ return {
 
       highlight = {
         enable = true,
-      }
+      },
+
+      endwise = {
+        enable = true,
+      },
     })
   end
 }
