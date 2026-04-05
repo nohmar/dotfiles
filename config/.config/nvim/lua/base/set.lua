@@ -27,3 +27,5 @@ vim.opt.clipboard = "unnamed,unnamedplus"
 vim.opt.termguicolors = true
 
 vim.opt.mouse = ""
+
+vim.opt.signcolumn = "yes"
