@@ -45,3 +45,6 @@ vim.keymap.set("n", "<leader>T", ":Dispatch<CR>")
 
 -- Open diagnostics
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
+
+-- Remove lines for easier copy pasta
+vim.keymap.set("n", "<leader>n", ":set nonumber nornu<CR>")

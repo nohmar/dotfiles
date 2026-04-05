@@ -30,11 +30,13 @@ stty -ixon
 source ~/.zsh/prompt.zsh
 source ~/.zsh/utils.zsh
 
-fpath=(${ASDF_DIR}/completions $fpath)
-
 autoload -Uz compinit && compinit
-. $HOME/.asdf/asdf.sh
 
 compctl -g '~/.teamocil/*(:t:r)' teamocil
 
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+
+# asdf configuration
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+typeset -U fpath

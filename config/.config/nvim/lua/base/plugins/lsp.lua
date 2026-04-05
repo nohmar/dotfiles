@@ -20,7 +20,7 @@ return {
         "rust_analyzer",
         "elixirls",
         "ruby_lsp",
-        "ts_ls",
+        "tsserver",
       },
 
       handlers = {
@@ -62,6 +62,13 @@ return {
       on_init = function()
         vim.g.rustfmt_autosave = 1
       end
+    })
+
+    require('lspconfig').ruby_lsp.setup({
+      init_options = {
+        formatter = 'standard',
+        linters = { 'standard' },
+      },
     })
   end
 }
