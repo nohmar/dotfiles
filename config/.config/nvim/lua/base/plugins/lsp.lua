@@ -21,6 +21,7 @@ return {
         "elixirls",
         "ruby_lsp",
         "tsserver",
+        "gopls"
       },
 
       handlers = {
