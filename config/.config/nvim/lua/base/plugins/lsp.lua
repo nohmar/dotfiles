@@ -21,6 +21,7 @@ return {
         "elixirls",
         "ruby_lsp",
         "tsserver",
+        "gopls"
       },
 
       handlers = {
@@ -32,7 +33,7 @@ return {
 
     -- Follow the server config instructions for `lua_ls` server. This eliminates
     -- some noisy errors.
-    require('lspconfig').lua_ls.setup({
+    vim.lsp.config('lua_ls', {
       on_init = function(client)
         local path = client.workspace_folders[1].name
         if vim.loop.fs_stat(path..'/.luarc.json') or vim.loop.fs_stat(path..'/.luarc.jsonc') then
@@ -58,13 +59,13 @@ return {
       }
     })
 
-    require('lspconfig').rust_analyzer.setup({
+    vim.lsp.config('rust_analyzer', {
       on_init = function()
         vim.g.rustfmt_autosave = 1
       end
     })
 
-    require('lspconfig').ruby_lsp.setup({
+    vim.lsp.config('ruby_lsp', {
       init_options = {
         formatter = 'standard',
         linters = { 'standard' },
