@@ -25,6 +25,7 @@ path=(
 # Allow commands to pass through to applications
 stty -ixon
 
+source ~/.zsh/bindings.zsh
 source ~/.zsh/prompt.zsh
 source ~/.zsh/utils.zsh
 
