@@ -48,5 +48,12 @@ return {
     })
 
     vim.cmd('autocmd FileType ruby setlocal indentkeys-=.')
+
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "ruby",
+      callback = function()
+        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+      end,
+    })
   end
 }
